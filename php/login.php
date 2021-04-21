@@ -11,7 +11,7 @@
         
 	      $conn=connection();	
         	     
-        $query = "SELECT * FROM projectdb.user WHERE ((Username='$myusername' OR Email='$myusername') AND Password='$mypassword')";
+        $query = "SELECT * FROM an74.user WHERE ((Username='$myusername' OR Email='$myusername') AND Password='$mypassword')";
     
         $results=runQuery($query,$conn);
     

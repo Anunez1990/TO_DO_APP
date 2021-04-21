@@ -50,7 +50,7 @@
               
               <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="left:-110px;">
                 <a href="#profile" class="w3-bar-item w3-button">My profile</a>
-                <a href="#" class="w3-bar-item w3-button">To-do Tasks</a>
+                <a href="#todo" class="w3-bar-item w3-button">To-do Tasks</a>
                 <a href="logout.php" class="w3-bar-item w3-button">Logout</a>
               </div>
             </div>
@@ -65,11 +65,10 @@
 
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large mt-5 pt-2">
+    <a href="#profile" class="w3-bar-item w3-button w3-padding-large">My profile</a>
+    <a href="#todo" class="w3-bar-item w3-button w3-padding-large">To-do Tasks</a>
+    <a href="logout.php" class="w3-bar-item w3-button w3-padding-large">Logout</a>
   </div>
 
   <!-- Page Container -->
@@ -125,7 +124,7 @@
       <div class="w3-col m7">
 
        <!-- DO TO TASKS SECTION-->
-        <div class="w3-container w3-card w3-white w3-round w3-margin  pl-2 pr-2 "><br>
+        <div class="w3-container w3-card w3-white w3-round w3-margin  pl-2 pr-2 " id="todo"><br>
 
             <div class="w3-container w3-display-container" style="display:inline-block; width:100%">
             <img src="images/to-do.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
@@ -159,7 +158,7 @@
                 <div class="col-lg-9 col-sm-8">
                     <strong> <?php echo $task[2]; ?></strong>
                     <p class="pl-4 mt-2"><?php echo $task[3]; ?></p>
-                    <p class="pl-4 mt-0"> timer reminder: <?php timereminder($task[5])?> days left</p>
+                    <p class="pl-4 mt-0"> Time reminder: <?php timereminder($task[5])?> days left</p>
                 </div>   
                 
                 <div class="col-1">
@@ -195,7 +194,7 @@
          
           <hr class="w3-clear">
 
-           <div class="w3-container w3-display-container w3-hide-small" style="display:inline-block; width:100%">
+           <div class="w3-container w3-display-container" style="display:inline-block; width:100%">
               <h5 >Add a new task</h5><br>
               <span onclick="addTask();" class="w3-button w3-theme-l3 w3-display-topright">
               <i class="fa fa-plus w3-xlarge"></i>
@@ -207,7 +206,7 @@
          <!-- COMPLETED TASK SECTION-->
         <div class="w3-container w3-card w3-white w3-round w3-margin  pl-2 pr-2 "><br>
 
-           <div class="w3-container w3-display-container w3-hide-small" style="display:inline-block; width:100%">
+           <div class="w3-container w3-display-container " style="display:inline-block; width:100%">
             <img src="images/completed.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
               <h4 >Completed Tasks</h4><br>
               
@@ -237,7 +236,7 @@
                   <div class="col-9">
                       <strong> <?php echo $task[2]; ?></strong>
                       <p class="pl-4 mt-2"><?php echo $task[3]; ?></p>
-                      <p class="pl-4 mt-0"> timer reminder: <?php timereminder($task[5])?> days ago</p>
+                      <p class="pl-4 mt-0"> Time reminder: <?php timereminder($task[5])?> days ago</p>
                   </div>   
                   
                  <div class="col-1">
@@ -311,7 +310,7 @@
                       <p class="mt-0 pl-1"><?php echo $task[3]; ?></p>
                 </div>
                 <div class="row pr-0">
-                       <p class="mt-0"> timer reminder: </p></br>
+                       <p class="mt-0"> Time reminder: </p></br>
                        <p class="mt-0"> <?php timereminder($task[5])?> days left</p>
                 </div>
                 

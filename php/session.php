@@ -5,7 +5,7 @@
     
     //Get the information of the current user
     $conn=connection();	
-    $query = "SELECT * FROM projectdb.user WHERE ((Username='$user_check' OR Email='$user_check'))"; 
+    $query = "SELECT * FROM an74.user WHERE ((Username='$user_check' OR Email='$user_check'))";
     $row=runQuery($query,$conn);
   	
     $login_session = $row[0][0];

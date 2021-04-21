@@ -6,9 +6,8 @@
   // get the information from the tasks
   $username = filter_input(INPUT_POST, 'username');
   $taskid = filter_input(INPUT_POST, 'task_id');
-  echo $taskid;
   
-  $query = "SELECT * FROM projectdb.task WHERE taskID='$taskid'"; 
+  $query = "SELECT * FROM an74.task WHERE taskID='$taskid'";
   $results=runQuery($query,$conn);
 
   $title = $results[0][2];
@@ -55,16 +54,6 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav" >
           <a href="#" class="w3-bar-item w3-button w3-padding-xlarge "><i class="fa fa-home w3-margin-right"></i>To-Do App</a>
-        
-          <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
-            <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-              <a href="#" class="w3-bar-item w3-button">One new friend request</a>
-              <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
-              <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
-            </div>
-          </div>
-
         </div>
       </div>
 
@@ -84,9 +73,9 @@
               <img src="images/user.png" class="w3-circle " style="height:35px;width:35px" alt="Avatar">
               
               <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="left:-110px;">
-                <a href="#profile" class="w3-bar-item w3-button">My profile</a>
-                <a href="#" class="w3-bar-item w3-button">To-do Tasks</a>
-                <a href="logout.php" class="w3-bar-item w3-button">Logout</a>
+                 <a href="main.php#profile" class="w3-bar-item w3-button">My profile</a>
+                 <a href="main.php#" class="w3-bar-item w3-button">To-do Tasks</a>
+                 <a href="logout.php" class="w3-bar-item w3-button">Logout</a>
               </div>
             </div>
       </div>

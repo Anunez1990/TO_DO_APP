@@ -18,30 +18,27 @@
         echo "</br>";
 
         if($action=="edit_Username"){
-            $query = "SELECT * FROM projectdb.user WHERE ((Username='$newusername'))";
+            $query = "SELECT * FROM an74.user WHERE ((Username='$newusername'))";
             echo $query;
             $result=runQuery($query,$conn);
 
             //Check if the unername is already registered in the database
             if(count($result)<1){
-              $query="UPDATE projectdb.user SET Username = '$newusername' WHERE Username = '$previousUsername'";
-              echo $query;
+              $query="UPDATE an74.user SET Username = '$newusername' WHERE Username = '$previousUsername'";
               updateQuery($query,$conn);
-               //header("location: ../index.php");
+              header("location: ../index.php");
             }else{
               $error="Username already exits";
-              //header("location: ../profile.php");
+              header("location: ../profile.php");
             }
         }else{
-           $query = "SELECT * FROM projectdb.user WHERE ((Username='$previousUsername'))";
-           echo $query;
+           $query = "SELECT * FROM an74.user WHERE ((Username='$previousUsername'))";
            $result=runQuery($query,$conn);
 
            if(count($result)>0){
-              $query="UPDATE projectdb.user SET Password = '$newPassword' WHERE Password = '$confirmPassword'";
-              echo $query;
+              $query="UPDATE an74.user SET Password = '$newPassword' WHERE Password = '$confirmPassword'";
               updateQuery($query,$conn);
-              //header("location: ../index.php");
+              header("location: ../index.php");
            }else{
                $error="Somenthing went wrong";
            }

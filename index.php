@@ -63,9 +63,7 @@
             <input type="password" placeholder="Password" name="Password" id="Password" required>
 
             <button type="submit">Sign in</button>
-            <label>
-              <label class="psw">Don't you have an account? <a href="signup.html">Sing up</a></label>
-            </label>
+             <label class="psw"><?php echo "Don't you have an account ";?> <a href="signup.php">Sing up</a> </label>
           </div>
           </form>
     </div>

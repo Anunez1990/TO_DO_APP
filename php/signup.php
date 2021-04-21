@@ -7,16 +7,16 @@
         $username = filter_input(INPUT_POST, 'username');
         $email= filter_input(INPUT_POST, 'email');
         
-	      $conn=connection();	
+	    $conn=connection();
       
-	      //Check if the user is already register in the database 
-        $query = "SELECT * FROM projectdb.user WHERE ((Username='$username' OR Email='$email'))";     	  
+	    //Check if the user is already register in the database
+        $query = "SELECT * FROM an74.user WHERE ((Username='$username' OR Email='$email'))";
         $result=runQuery($query,$conn);
-		    $count = count($results);
-
-        //If a user is foun with the given username print and error
+		$count = count($result);
+        //echo $count;
+        //If a user is found with the given username print and error
         if($count>0){
-          echo "User already exits";
+          $error "User already exits";
         }else{
 
           //---------------------- INSERT A NEW RECORD ----------------------------
@@ -24,10 +24,10 @@
           $fname= filter_input(INPUT_POST, 'fname');
           $lname= filter_input(INPUT_POST, 'lname');
 
-          $query ="INSERT INTO projectdb.user(Username,Email,Password, FirstName, Lastname)VALUES('$username','$email','$password','$fname','$lname')";
-          runQuery($query,$conn);
+          $query ="INSERT INTO an74.user(Username, Email, Password, FirstName, Lastname)VALUES('$username','$email','$password','$fname','$lname')";
+          //echo $query;
+          updateQuery($query,$conn);
           header("location: ../index.php");
         }
-
    }
 ?>

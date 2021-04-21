@@ -14,9 +14,9 @@
      
      
       //---------------------- INSERT A NEW TASK ----------------------------
-      $query ="INSERT INTO projectdb.task(Username,Title,Description,Urgency,DueDate,Status)VALUES('$username','$title','$description','$urgency','$duedate',0)";
-      runQuery($query,$conn);
-      header("location: ../main.php");
+      $query ="INSERT INTO an74.task(Username,Title,Description,Urgency,DueDate,Status)VALUES('$username','$title','$description','$urgency','$duedate',0)";
+      updateQuery($query,$conn);
+      //header("location: ../main.php");
   }
 
 ?>

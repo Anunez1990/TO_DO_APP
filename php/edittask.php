@@ -13,9 +13,9 @@
      
       
       //---------------------- INSERT A NEW TASK ----------------------------
-      $query="UPDATE projectdb.task SET Title = '$title', Description='$description', Urgency='$urgency', DueDate='$duedate' WHERE taskID = '$taskid'";
-     updateQuery($query,$conn);
-     header("location: ../main.php");
+      $query="UPDATE an74.task SET Title = '$title', Description='$description', Urgency='$urgency', DueDate='$duedate' WHERE taskID = '$taskid'";
+      updateQuery($query,$conn);
+      header("location: ../main.php");
   }
 
 ?>
