@@ -83,7 +83,9 @@
             <h2 class="w3-center">
               <?php
                 echo $login_session;
+
               ?>
+
             </h2>
             <p class="w3-center"><img src="images/user.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
             <hr>
@@ -158,7 +160,7 @@
                 <div class="col-lg-9 col-sm-8">
                     <strong> <?php echo $task[2]; ?></strong>
                     <p class="pl-4 mt-2"><?php echo $task[3]; ?></p>
-                    <p class="pl-4 mt-0"> Time reminder: <?php timereminder($task[5])?> days left</p>
+                    <p class="pl-4 mt-0"> Time reminder: <?php echo timereminder($task[5])?></p>
                 </div>   
                 
                 <div class="col-1">
@@ -236,7 +238,7 @@
                   <div class="col-9">
                       <strong> <?php echo $task[2]; ?></strong>
                       <p class="pl-4 mt-2"><?php echo $task[3]; ?></p>
-                      <p class="pl-4 mt-0"> Time reminder: <?php timereminder($task[5])?> days ago</p>
+                      <p class="pl-4 mt-0"> Time reminder: <?php echo timereminder($task[5])?> </p>
                   </div>   
                   
                  <div class="col-1">
@@ -311,7 +313,7 @@
                 </div>
                 <div class="row pr-0">
                        <p class="mt-0"> Time reminder: </p></br>
-                       <p class="mt-0"> <?php timereminder($task[5])?> days left</p>
+                       <p class="mt-0"> <?php echo timereminder($task[5])?> </p>
                 </div>
                 
               </div>

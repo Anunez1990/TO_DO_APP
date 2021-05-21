@@ -11,7 +11,11 @@
     $login_session = $row[0][0];
     $username=$row[0][0];
     $email = $row[0][1];
-    $password = $row[0][2];
+    //getting only the current password
+    $pass = $row[0][2];
+    $pswarray = explode(",", $pass);
+    $password= array_pop($pswarray);
+    //---------------------------------
     $fname = $row[0][3];
     $lname = $row[0][4];
 

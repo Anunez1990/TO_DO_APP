@@ -5,18 +5,17 @@
     document.getElementById("Username").disabled=false;
     document.getElementById("Username").value="";
     document.getElementById("Username").focus();
-       
+    document.getElementById("main-error").innerHTML="";
   }
 
-
   function editPassword(){
-
     document.forms["updateForm"]["action"].value="edit_Password";
     document.getElementById("confirmPsw").style.display="block";
     document.getElementById("Username").disabled=true;
     document.getElementById("Password").disabled=false;
     document.getElementById("Password").value="";
     document.getElementById("Password").focus();
+    document.getElementById("main-error").innerHTML="";
   }
     
   function updateValidation(){
@@ -26,11 +25,9 @@
         document.getElementsByClassName("invalid-input").item(j).innerHTML="";
     }//--------------------------------------------------------------------------------
 
-
     var action= document.forms["updateForm"]["action"].value
     var previousPassword= document.forms["updateForm"]["previousPassword"].value
     var confirmPassword= document.forms["updateForm"]["confirmPassword"].value
-
 
     if(action=="edit_Username"){
       

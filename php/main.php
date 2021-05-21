@@ -62,9 +62,12 @@
        
 
         $time_reminder= $now->diff($due);
-        echo $time_reminder->format('%d');
-
-        return $time_reminder;
+   
+        if ($time_reminder->invert==1) {
+            return $time_reminder->format('%d')."  days ago";
+        }else{
+            return $time_reminder->format('%d')." days left";
+        }
     }
    
 ?>

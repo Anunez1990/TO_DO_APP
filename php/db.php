@@ -1,11 +1,11 @@
 <?php
 		
 	function connection(){
-	    //LOCAL HOST
+	    //LOCAL SERVER
 		//$servername = "localhost:4306";
 		//$username = "root";
 		//$password = "1234";
-		//$dbname = "projectdb"; // your database name
+		//$dbname = "an74"; // your database name
 
 		  //connect to remote server, the following settings should be on
           $servername = "sql1.njit.edu";// you need to put your assigned server name

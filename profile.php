@@ -1,6 +1,7 @@
 <?php
    include('php/db.php');
    include('php/session.php');
+   include('php/update.php');
 ?>
 
 <!DOCTYPE html>
@@ -86,10 +87,15 @@
  <div class="container-page mt-5 pt-4 pb-4">
     <div class="row">
       <div class="col mr-auto ml-auto">
-        <form name="updateForm" class="profileForm" action="php/update.php" onsubmit="return(updateValidation());" method="post">
+        <form name="updateForm" class="profileForm" action="#" onsubmit="return(updateValidation());" method="post">
           <div class="imgcontainer">
             <h3 class="text-white">Update Information</h3>
             <img src="images/user2.jpg" alt="Avatar" class="avatar">
+            <div class="text-white" id="main-error">
+              <?php
+                echo $errormsg;
+              ?>
+            </div>
             
           </div>
 
@@ -144,22 +150,6 @@
       </div>
     </div>
   </div>
-
-    <!-- Footer -->
-  <!-- <footer class="w3-container w3-theme-d2 pt-3">
-
-    <div class="container-fluid text-center">
-      
-        <i class="social-icon fa fa-facebook-f"></i>
-        <i class="social-icon fa fa-twitter"></i>
-        <i class="social-icon fa fa-instagram"></i>
-        <i class="social-icon fa fa-envelope"></i>
-        <p class="mt-1">© Copyright 2020 Alex V. Nunez</p>
-        <p class="mt-1">
-        <a href="#">Back to top</a>
-      </p>
-    </div>
-</footer> -->
 
   <script src="js/update.js"></script>
   <script src="js/validation.js"></script>

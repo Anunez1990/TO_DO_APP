@@ -1,6 +1,7 @@
 <?php
     include("php/signup.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
