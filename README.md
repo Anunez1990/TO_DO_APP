@@ -18,8 +18,6 @@ $password = "1234"; //your password
 $dbname = "an74"; 
 
 ## Set up Local Database
-the database is included under the folder database, where you will find the slq file. 
-In order to have the database available just download the file and imported in PHPmyAdmin.
-In order to make the application works you have to name your database an74. Otherwise you have 
-to change the query's for all the project.
+The database is included under the folder database, where you will find the SQL file. In order to have the database available just download the file and imported it in PHPmyAdmin.
+In order to make the application works, you have to name your database an74. Otherwise, you have to change the queries for all the projects.
 
