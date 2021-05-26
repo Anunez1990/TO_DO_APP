@@ -5,13 +5,16 @@ https://web.njit.edu/~an74/is218project/
 ## Local configuration
 
 In order to connect the web application with the local server,
-you must go to the db.php under the php folder and edit the following lines in the connection function.
+you must go to the db.php file under the php folder and edit the following lines in the connection function.
 
-//LOCAL SERVER
+LOCAL SERVER
 
 $servername = "localhost"; //your server name
+
 $username = "root"; //your username
+
 $password = "1234"; //your password
+
 $dbname = "an74"; 
 
 ## Set up Local Database
