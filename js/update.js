@@ -10,7 +10,6 @@
   }
 
   function editPassword(){
-	  
     document.forms["updateForm"]["action"].value="edit_Password";
     document.getElementById("confirmPsw").style.display="block";
     document.getElementById("Username").disabled=true;
@@ -18,7 +17,10 @@
     document.getElementById("Password").value="";
     document.getElementById("Password").focus();
     document.getElementById("main-error").innerHTML="";
-	
+    // Update the visible label when switching to password edit mode
+    var pwLabel = document.getElementById("password-label");
+    if (pwLabel) pwLabel.innerText = "New Password";
+    alert("Your new password must contain at least 8 characters, including uppercase, lowercase letters, numbers and special characters.");
   }
     
   function updateValidation(){
