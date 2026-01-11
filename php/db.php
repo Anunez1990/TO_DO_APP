@@ -1,17 +1,18 @@
 <?php
 		
 	function connection(){
-	    //LOCAL SERVER
-		//$servername = "localhost:4306";
-		//$username = "root";
-		//$password = "1234";
-		//$dbname = "an74"; // your database name
+		//--------------------LOCAL SERVER--------------------------
+		$servername = "localhost:3306";
+		$username = "root";
+		$password = "1234";
+		$dbname = "an74"; // your database name
 
+		  //-------------------REMOTE SERVER------------------------
 		  //connect to remote server, the following settings should be on
-          $servername = "sql1.njit.edu";// you need to put your assigned server name
-          $username = "an74";// your ucid
-          $password = "Lex8622948919/";// YOUR database password
-          $dbname = "an74"; // your ucid is your database name
+         // $servername = "sql1.njit.edu";// you need to put your assigned server name
+          //$username = "an74";// your ucid
+          //$password = "Lex8622948919/";// YOUR database password
+          //$dbname = "an74"; // your ucid is your database name
 
 		try {
 			$conn = new PDO("mysql:host=$servername;$dbname", $username, $password);

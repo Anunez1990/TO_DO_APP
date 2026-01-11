@@ -74,15 +74,14 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`Username`, `Email`, `Password`, `FirstName`, `LastName`) VALUES
-('Alex07', 'alex07@gmail.com', 'Alex2300', 'Alex', 'Nunez'),
-('alexn23', 'alex@hotmail.com', 'Anunez1990', 'Alex', 'Nunez'),
+('Admin', 'tesuser@email.edu', 'Test@123', 'Test', 'User'),
 ('Bruno90', 'bruno90@gmail.com', 'Bruno900', 'Bruno', 'Dias'),
 ('Charly07', 'charly07@gmail.com', '07Charly', 'Charly', 'Brown'),
 ('Lilinnr5', 'lili@email.com', 'Lili1999', 'Liliana ', 'Nunez'),
 ('Paul15', 'paul10@gmail.com', 'Paul1234', 'Paul', 'Smith'),
 ('Samy999', 'samy9@gmail.com', 'Samy0999', 'Samy', 'McAdams');
 
---
+
 -- Indexes for dumped tables
 --
 
