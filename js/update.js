@@ -34,13 +34,15 @@
     }
     // Update the password input placeholder as a visual hint
     var pwInput = document.getElementById("Password");
+    var confirmpwInput = document.getElementById("confirmPassword");
     if (pwInput) pwInput.placeholder = "Enter New Password";
+    if (confirmpwInput) confirmpwInput.placeholder = "Confirm New Password";
     alert("Your new password must contain at least 8 characters, including uppercase, lowercase letters, numbers and special characters.");
   }
     
   function updateValidation(){
 
-    //------------Hide the error message everytime the form is validated---------------
+    //-Hide the error message everytime the form is validated---------------
     for(var j=0;j<3;j++){
         document.getElementsByClassName("invalid-input").item(j).innerHTML="";
     }//--------------------------------------------------------------------------------
@@ -89,7 +91,7 @@
            return false;
         }else{
           //if the password is diferent check if confirm the password to update the new password
-          if(previousPassword==confirmPassword){
+          if(psw==confirmPassword){
               return true;
           }else{
               error(2,"Password is incorrect","confirmPassword");

@@ -1,4 +1,6 @@
 <?php
+
+// Initialize the session
 if (session_status() === PHP_SESSION_NONE) {
   session_start();
 }
@@ -14,8 +16,6 @@ if (ini_get("session.use_cookies")) {
 }
 session_unset();
 session_destroy();
-header('Location: index.php');
-exit;
 ?>
 
 <!DOCTYPE html>

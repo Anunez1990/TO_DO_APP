@@ -94,8 +94,8 @@
             <div class="text-white" id="main-error">
               <?php
                 if (!empty($errormsg)) {
-				echo "<p>$errormsg</p>";
-			  }
+                  echo "<p>$errormsg</p>";
+                }
               ?>
 
             </div>
@@ -139,7 +139,7 @@
             
             <div class="confirmpass mr-3 ml-3 mt-4" id="confirmPsw">
               <div class="row">
-                <label for="Password"><b>Confirm Password</b></label>
+                <label for="Password"><b id="confirmpassword-label">Confirm Password</b></label>
                 <input type="password" placeholder="Current Password" name="confirmPassword" Id="confirmPassword" required />
                 <div class="invalid-input">
                   Password not valid.
