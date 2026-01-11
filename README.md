@@ -4,7 +4,7 @@ A small PHP/MySQL web application to manage personal tasks.
 
 **Link for the webpage**
 
-https://web.njit.edu/~an74/is218project/
+http://antodoapp.atwebpages.com/
 
 **Prerequisites**
 
