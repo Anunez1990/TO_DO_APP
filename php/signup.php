@@ -2,12 +2,14 @@
    include("db.php");
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-      
+	   
+        //initialize variables
+		$error=null;
         // get username and password sent from the form 
         $username = filter_input(INPUT_POST, 'username');
         $email= filter_input(INPUT_POST, 'email');
         
-	      $conn=connection();
+	    $conn=connection();
       
 	    //Check if the user is already register in the database
         $query = "SELECT * FROM an74.user WHERE ((Username='$username' OR Email='$email'))";

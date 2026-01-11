@@ -93,8 +93,11 @@
             <img src="images/user2.jpg" alt="Avatar" class="avatar">
             <div class="text-white" id="main-error">
               <?php
-                echo $errormsg;
+                if (!empty($errormsg)) {
+                  echo "<p>$errormsg</p>";
+                }
               ?>
+
             </div>
             
           </div>
@@ -116,7 +119,7 @@
 
             <div class="row">
               <div class="col-8">
-                <label for="Password"><b>Password</b></label>
+                <label for="Password" ><b id="password-label">Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" Id="Password" value="<?php echo $password;?>" required/>
                 <div class="invalid-input">
                   Password not valid.
@@ -136,7 +139,7 @@
             
             <div class="confirmpass mr-3 ml-3 mt-4" id="confirmPsw">
               <div class="row">
-                <label for="Password"><b>Confirm Password</b></label>
+                <label for="Password"><b id="confirmpassword-label">Confirm Password</b></label>
                 <input type="password" placeholder="Current Password" name="confirmPassword" Id="confirmPassword" required />
                 <div class="invalid-input">
                   Password not valid.

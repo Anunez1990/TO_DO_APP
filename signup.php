@@ -47,7 +47,10 @@
             <img src="images/user2.jpg" alt="Avatar" class="avatar">
             <div class="">
               <?php
-                echo $error;
+               if (!empty($errormsg)) {
+					echo "<p>$errormsg</p>";
+				}
+
               ?>
             </div>
           </div>
