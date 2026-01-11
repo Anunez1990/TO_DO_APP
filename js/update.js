@@ -6,6 +6,15 @@
     document.getElementById("Username").value="";
     document.getElementById("Username").focus();
     document.getElementById("main-error").innerHTML="";
+  // Update the visible label when switching to username edit mode
+  var userLabel = document.getElementById("username-label") || document.querySelector('label[for="Username"] b');
+  if (userLabel) {
+    userLabel.textContent = "New Username";
+    userLabel.style.color = "#ffffff";
+  }
+  // Update the username input placeholder as a visual hint
+  var userInput = document.getElementById("Username");
+  if (userInput) userInput.placeholder = "Enter New Username";
 
   }
 
