@@ -18,8 +18,14 @@
     document.getElementById("Password").focus();
     document.getElementById("main-error").innerHTML="";
     // Update the visible label when switching to password edit mode
-    var pwLabel = document.getElementById("password-label");
-    if (pwLabel) pwLabel.innerText = "New Password";
+    var pwLabel = document.getElementById("password-label") || document.querySelector('label[for="Password"] b');
+    if (pwLabel) {
+      pwLabel.textContent = "New Password";
+      pwLabel.style.color = "#ffffff";
+    }
+    // Update the password input placeholder as a visual hint
+    var pwInput = document.getElementById("Password");
+    if (pwInput) pwInput.placeholder = "Enter New Password";
     alert("Your new password must contain at least 8 characters, including uppercase, lowercase letters, numbers and special characters.");
   }
     
